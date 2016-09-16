@@ -2,16 +2,10 @@
 This is our web portal for eecs4314 assignments
 
 ##Partners:
-Name,	CSE#,	Student#
-
-David Iliaguiev,	davidili,	210479830
-
-Shane Zhao,	-,	-
-
--,	-,	-
-
--,	-,	-
-
--,	-,	-
-
--,	-,	-
+Name,	CSE#,	Student#  
+David Iliaguiev,	davidili,	210479830  
+Shane Zhao,	-,	-  
+-,	-,	-  
+-,	-,	-  
+-,	-,	-  
+-,	-,	-  
