@@ -1,4 +1,4 @@
-# eecs4314
+# EECS4314
 This is our web portal for eecs4314 assignments
 
 ##Partners:
