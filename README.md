@@ -1,4 +1,5 @@
 # EECS4314
+Team - Reverse 'em all
 This is our web portal for eecs4314 assignments
 
 ##Partners:
