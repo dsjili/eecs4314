@@ -8,4 +8,4 @@ David Iliaguiev,	davidili,	210479830
 Hashim Al-Helli  
 Randy Agyapong,	randya25,	210547495  
 Zhongran Deng  
-Sied Hoa (Heny) Tjin, 
+Sied Hoa (Heny) Tjin
