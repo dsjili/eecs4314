@@ -6,5 +6,5 @@ This is our web portal for eecs4314 assignments
 David Iliaguiev  
 Hashim Al-Helli  
 Randy Agyapong  
-Zhongran(Julian) Deng  
+Zhongran (Julian) Deng  
 Sied Hoa (Heny) Tjin  
