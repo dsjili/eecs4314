@@ -3,8 +3,7 @@
 This is our web portal for eecs4314 assignments
 
 ##Partners:
-David Iliaguiev  
-Hashim Al-Helli  
+David Iliaguiev   
 Randy Agyapong  
 Zhongran (Julian) Deng  
 Sied Hoa (Heny) Tjin  
