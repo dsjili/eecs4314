@@ -24,14 +24,15 @@ public class Include
 	
 	public static void main(String[] args) throws IOException{
 		//System.out.println("Hello World!");
-		File root = new File("C:\\Users\\Commo\\Documents\\include\\hadoop-2.7.3-src");
+		String hadoop = ("C:\\Users\\Commo\\Documents\\include\\hadoop-2.7.3-src");
+		File root = new File(hadoop);
 		File listFile = new File("C:\\Users\\Commo\\Documents\\include\\hadoop_FileDependencies.ls.ta");
 		List<String> instances = new ArrayList<String>();
 		List<String> outputt = new ArrayList<String>();
 		List<File> javaFiles = new ArrayList<File>();
 		
 			writer = new BufferedWriter(new OutputStreamWriter(
-              new FileOutputStream("filename.txt"), "utf-8")); 
+              new FileOutputStream("filename2.txt"), "utf-8")); 
 			//writer.write("AAAA");
 			//writer.newLine();
 			//writer.write("BBBBB");
@@ -113,7 +114,7 @@ public class Include
 			//System.out.println(two[0]);
 			for(String path : outputt) 
 			{
-				if (path.contains(two[0]))
+				if (path.contains(two[0] + ".java"))
 				{
 					String toFileName = file.getPath();
 					path = path.replace("/", "\\");
