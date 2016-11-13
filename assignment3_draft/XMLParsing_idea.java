@@ -24,7 +24,7 @@ import org.xml.sax.SAXException;
 
 public class XMLParsing_idea {
 
-	public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException {
+	public static void run() throws ParserConfigurationException, SAXException, IOException {
 		// TODO Auto-generated method stub
 		String fileName = new String("C:\\Users\\dzhon\\Desktop\\Adv. Software Engineering EECS4314\\assignment3\\idea_dependecy.xml");
 		PrintWriter writer = new PrintWriter("idea_dependency.txt", "UTF-8");
@@ -53,7 +53,8 @@ public class XMLParsing_idea {
                     			                    			 
                     			 output = output.replace("path=", "");
                     			 output = output.replace("\"", "");
-                    			 
+                    			 output = output.replace("/", "\\");
+					 
                     			 System.out.println(output);
                     			 writer.println(output);                    	                   		 
                     			 }
