@@ -34,35 +34,34 @@ public class XMLParsing_idea {
         	Document document = db.parse(fileName);
         	NodeList users = document.getChildNodes();   
        	 
-        	 for(int i = 0; i < users.getLength(); i++){
-        		 Node user = users.item(i);
-        		 NodeList userInfo = user.getChildNodes();
+        	for(int i = 0; i < users.getLength(); i++){
+        		Node user = users.item(i);
+        		NodeList userInfo = user.getChildNodes();
         		 //System.out.println(users.item(i).getNodeName() + ":");
         		 
-                 for (int j = 0; j < userInfo.getLength(); j++) {
-                     Node node = userInfo.item(j);
-                     NodeList userMeta = node.getChildNodes();
-                     if(!userInfo.item(j).getNodeName().equals("#text")){
-                     
-
-                    	 for (int k = 0; k < userMeta.getLength(); k++){
-                    		 if(userMeta.item(k).getNodeName() != "#text"){
-                    			 String dependee = new String(userInfo.item(j).getAttributes().getNamedItem("path").toString());
-                    			 String dependent = new String(userMeta.item(k).getAttributes().getNamedItem("path").toString());
-                    			 String output = new String(dependee + "," + dependent);
+                 	for (int j = 0; j < userInfo.getLength(); j++) {
+                     		Node node = userInfo.item(j);
+                     		NodeList userMeta = node.getChildNodes();
+                     		if(!userInfo.item(j).getNodeName().equals("#text")){                    
+                    		 	
+					for (int k = 0; k < userMeta.getLength(); k++){
+                    		 		if(userMeta.item(k).getNodeName() != "#text"){
+                    				 	String dependee = new String(userInfo.item(j).getAttributes().getNamedItem("path").toString());
+                    				 	String dependent = new String(userMeta.item(k).getAttributes().getNamedItem("path").toString());
+                    			 	 	String output = new String(dependee + "," + dependent);
                     			                    			 
-                    			 output = output.replace("path=", "");
-                    			 output = output.replace("\"", "");
-                    			 output = output.replace("/", "\\");
+                    					 output = output.replace("path=", "");
+                    			 	 	output = output.replace("\"", "");
+                    			 	 	output = output.replace("/", "\\");
 					 
-                    			 System.out.println(output);
-                    			 writer.println(output);                    	                   		 
-                    			 }
+                    			 	 	System.out.println(output);
+                    			 	 	writer.println(output);                    	                   		 
+                    			 	 }
 
-                    	 }
-                     }
-                 }
-        	 }
+                    	 		 }
+                    		 }
+                 	 }
+        	}
         	 
      		writer.flush();
     		writer.close();
