@@ -1,0 +1,36 @@
+36805: hadoop-2.7.3-src\hadoop-yarn-project\hadoop-yarn\hadoop-yarn-server\hadoop-yarn-server-resourcemanager\src\main\java\org\apache\hadoop\yarn\server\resourcemanager\scheduler\SchedulerApplicationAttempt.java,hadoop-2.7.3-src\hadoop-yarn-project\hadoop-yarn\hadoop-yarn-api\src\main\java\org\apache\hadoop\yarn\api\records\NodeId.java
+
+	• Overlap because this file imports NodeID. Also some of its variables "protected final Map<Priority, Map<NodeId, RmContainer>> … used NodeId. It's also used in parameters of methods.
+
+44087: hadoop-2.7.3-src\hadoop-common-project\hadoop-common\src\test\java\org\apache\hadoop\security\TestNetgroupCache.java,hadoop-2.7.3-src\hadoop-common-project\hadoop-common\src\main\java\org\apache\hadoop\security\NetgroupCache.java
+	• Understand only because it's not imported. Use in "NetgroupCache.add(GROUP1, users)", calls it from NetgroupCache.add
+
+20740: hadoop-2.7.3-src\hadoop-mapreduce-project\hadoop-mapreduce-client\hadoop-mapreduce-client-core\src\main\java\org\apache\hadoop\mapreduce\lib\fieldsel\FieldSelectionReducer.java,hadoop-2.7.3-src\hadoop-common-project\hadoop-common\src\main\java\org\apache\hadoop\conf\Configuration.java
+	• Both import and Understand has variables and methods that use them. Understand also creates a variable with it under a method "Configuration conf = context.getConfiguration(); Then uses conf.get() methods.
+
+8297: hadoop-2.7.3-src\hadoop-hdfs-project\hadoop-hdfs\src\main\java\org\apache\hadoop\hdfs\server\namenode\FSDirSymlinkOp.java,hadoop-2.7.3-src\hadoop-common-project\hadoop-common\src\main\java\org\apache\hadoop\fs\permission\PermissionStatus.java
+	• Both import, Understand uses it in method parameter "PermissionStatis dirPerms", used as a constructor and uses methods from it, ie dirPerms.getUserName
+
+25968: hadoop-2.7.3-src\hadoop-tools\hadoop-aws\src\main\java\org\apache\hadoop\fs\s3\INode.java,hadoop-2.7.3-src\hadoop-common-project\hadoop-annotations\src\main\java\org\apache\hadoop\classification\InterfaceAudience.java
+	• Both use import, Understand uses Java's annotations too: @InterfaceAudience.Private
+
+34423: hadoop-2.7.3-src\hadoop-yarn-project\hadoop-yarn\hadoop-yarn-server\hadoop-yarn-server-nodemanager\src\test\java\org\apache\hadoop\yarn\server\nodemanager\recovery\TestNMLeveldbStateStoreService.java,hadoop-2.7.3-src\hadoop-yarn-project\hadoop-yarn\hadoop-yarn-api\src\main\java\org\apache\hadoop\yarn\api\records\LocalResourceType.java
+	• Both uses import, Understand also has constant types "LocalREsourseType.ARCHIVE/FILE"
+
+1606: hadoop-2.7.3-src\hadoop-common-project\hadoop-common\src\main\java\org\apache\hadoop\ipc\package-info.java,hadoop-2.7.3-src\hadoop-common-project\hadoop-annotations\src\main\java\org\apache\hadoop\classification\InterfaceStability.java
+	• Both import, Understand detects annotations @InterfaceStability.Evolving
+
+18698: hadoop-2.7.3-src\hadoop-mapreduce-project\hadoop-mapreduce-client\hadoop-mapreduce-client-common\src\main\java\org\apache\hadoop\mapreduce\v2\security\MRDelegationTokenRenewer.java,hadoop-2.7.3-src\hadoop-common-project\hadoop-common\src\main\java\org\apache\hadoop\security\token\TokenRenewer.java
+	• Both imports, Understand also extends this class. Public class "MRDelegationTokenRenewer extends TokenRenewer"
+
+18091: hadoop-2.7.3-src\hadoop-mapreduce-project\hadoop-mapreduce-client\hadoop-mapreduce-client-app\src\test\java\org\apache\hadoop\mapreduce\v2\app\TestStagingCleanup.java,hadoop-2.7.3-src\hadoop-mapreduce-project\hadoop-mapreduce-client\hadoop-mapreduce-client-common\src\main\java\org\apache\hadoop\mapreduce\v2\util\MRApps.java
+	• Imports and Understand uses MRApps.getStagingAreaDir(conf, user); in its tests
+
+
+39022: hadoop-2.7.3-src\hadoop-yarn-project\hadoop-yarn\hadoop-yarn-server\hadoop-yarn-server-resourcemanager\src\test\java\org\apache\hadoop\yarn\server\resourcemanager\security\TestDelegationTokenRenewer.java,hadoop-2.7.3-src\hadoop-yarn-project\hadoop-yarn\hadoop-yarn-server\hadoop-yarn-server-resourcemanager\src\main\java\org\apache\hadoop\yarn\server\resourcemanager\rmapp\RMAppEventType.java
+	• Imports
+62615: hadoop-2.7.3-src\hadoop-yarn-project\hadoop-yarn\hadoop-yarn-server\hadoop-yarn-server-nodemanager\src\main\java\org\apache\hadoop\yarn\server\nodemanager\containermanager\container\ContainerImpl.java,hadoop-2.7.3-src\hadoop-yarn-project\hadoop-yarn\hadoop-yarn-server\hadoop-yarn-server-nodemanager\src\main\java\org\apache\hadoop\yarn\server\nodemanager\containermanager\application\ApplicationContainerFinishedEvent.java
+	• Not quite sure actually. The file clearly imports it: "import org.apache.hadoop.yarn.server.nodemanager.containermanager.application.ApplicationcontainerFinishedEvent"
+	• While looking through the dependency browser, it recorgnizes this import. And the class creates this class "eventHandler.handle(new ApplicationContainerFinishedEvent(containerId));" under a method "private void sendFinishedEvents()
+	• Was not found in the exported .csv file of dependencies
+4149: hadoop-2.7.3-src\hadoop-common-project\hadoop-common\src\test\java\org\apache\hadoop\security\token\delegation\web\TestDelegationTokenAuthenticationHandlerWithMocks.java,hadoop-2.7.3-src\hadoop-common-project\hadoop-common\src\main\java\org\apache\hadoop\util\HttpExceptionUtils.java
