@@ -1,6 +1,7 @@
 import java.io.*;
 import java.util.*;
 
+/*Run this file in the command line. Specify where the ls.ta file is your directory and its name. */
 public class Include
 {
 	public static BufferedWriter writer;
